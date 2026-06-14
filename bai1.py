@@ -53,12 +53,10 @@ for shipment in shipments:
         print(f" + Dự kiến cập bến (ETA): {eta.strftime('%Y-%m-%d %H:%M:%S')}")
         
         if eta <= deadline:
-            print(" + Trạng thái: 🟢 AN TOÀN (Kịp tiến độ trước deadline)\n")
+            print(" + Trạng thái:  AN TOÀN (Kịp tiến độ trước deadline)")
         else:
-            print(f" + Trạng thái: 🔴 CẢNH BÁO (Trễ hạn! Deadline yêu cầu lúc {deadline.strftime('%H:%M:%S')})\n")
+            print(f" + Trạng thái:  CẢNH BÁO (Trễ hạn! Deadline yêu cầu lúc {deadline.strftime('%H:%M:%S')})")
             
     except ValueError:
-        print(f"Lỗi: Chuyến xe {shipment['id']} dính sai định dạng chuỗi thời gian!\n")
+        print(f"Lỗi: Chuyến xe {shipment['id']} dính sai định dạng chuỗi thời gian!")
         continue
-
-print("========================================================")
